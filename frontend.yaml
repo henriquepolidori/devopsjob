@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  namespace: default
+  labels:
+    app: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: docker.io/bitnami/mariadb:10.5.13-debian-10-r6 
+        env:
+        - name: MARIADB_DATABASE
+          value: mysql
+        - name: MARIADB_ROOT_HOST
+          value: my-mariadb.default.svc.cluster.local 
+        - name: MARIADB_ROOT_PASSWORD
+          value: 7sLLqEJSVk
+ 
