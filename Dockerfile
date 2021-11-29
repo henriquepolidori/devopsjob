@@ -1,3 +1,3 @@
 FROM ubuntu:20.04
 
-CMD ["python", "/app/main.py"]
+CMD ["/bin/sleep", "3650d"]
