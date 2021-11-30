@@ -13,3 +13,5 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm install my-mariadb bitnami/mariadb
 
 Connect from Ubuntu python script to mariadb database
+
+Use script.py to connect from ubuntu container to mariadb datababase (Helm chart)
